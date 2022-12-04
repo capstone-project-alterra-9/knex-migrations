@@ -14,37 +14,16 @@ module.exports = {
             directory: './seeds',
         },
     },
-    // TODO: update staging and production config
-    // staging: {
-    //     client: 'postgresql',
-    //     connection: {
-    //         database: 'my_db',
-    //         user: 'username',
-    //         password: 'password',
-    //     },
-    //     pool: {
-    //         min: 2,
-    //         max: 10,
-    //     },
-    //     migrations: {
-    //         tableName: 'knex_migrations',
-    //     },
-    // },
-
-    // production: {
-    //     client: 'postgresql',
-    //     connection: {
-    //         database: 'my_db',
-    //         user: 'username',
-    //         password: 'password',
-    //     },
-    //     pool: {
-    //         min: 2,
-    //         max: 10,
-    //     },
-    //     migrations: {
-    //         tableName: 'knex_migrations',
-    //     },
-    // },
+    production: {
+        client: 'pg',
+        connection: 'postgresql://postgres:qfW8Lk0MsdTzVJF5F1lX@containers-us-west-37.railway.app:7302/railway',
+        pool: {
+            min: 2,
+            max: 10,
+        },
+        migrations: {
+            directory: './migrations',
+        },
+    },
 
 };

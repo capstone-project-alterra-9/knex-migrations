@@ -12,6 +12,7 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.down = function(knex) {
-  
-};
+ exports.down = (knex) => knex.schema
+ .table('points', (table) => {
+     table.dropColumn('cost_points');
+ });
